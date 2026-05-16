@@ -17,8 +17,10 @@ s
 
 L1 model checkpoints trained with our framework are available at:
 [Qwen2.5VL-3B-Instruct-HC-VIKI-R-VSPO-L1](https://huggingface.co/yjx8888/Qwen2.5VL-3B-Instruct-VIKI-R-VSPO-L1).
+
 L2 model checkpoints trained with our framework are available at:
 [Qwen2.5VL-3B-Instruct-HC-VIKI-R-VSPO-L2](https://huggingface.co/yjx8888/Qwen2.5VL-3B-Instruct-VIKI-R-VSPO-L2).
+
 dataset will be onlined when the paper is published.
 
 ```bash

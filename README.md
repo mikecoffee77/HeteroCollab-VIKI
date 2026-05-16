@@ -15,6 +15,12 @@ s
 
 ### Environment Setup
 
+L1 model checkpoints trained with our framework are available at:
+[Qwen2.5VL-3B-Instruct-HC-VIKI-R-VSPO-L1](https://huggingface.co/yjx8888/Qwen2.5VL-3B-Instruct-VIKI-R-VSPO-L1).
+L2 model checkpoints trained with our framework are available at:
+[Qwen2.5VL-3B-Instruct-HC-VIKI-R-VSPO-L2](https://huggingface.co/yjx8888/Qwen2.5VL-3B-Instruct-VIKI-R-VSPO-L2).
+dataset will be onlined when the paper is published.
+
 ```bash
 # Clone repository
 git clone https://github.com/mikecoffee77/HeteroCollab-VIKI.git
@@ -35,11 +41,6 @@ cd ..
 pip install flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
 ```
 
-### Data Preparation
-
-```bash
-# Download VIKI-R dataset from Hugging Face
-git clone https://huggingface.co/datasets/henggg/VIKI-R
 ```
 
 ### Training
@@ -51,21 +52,17 @@ git clone https://huggingface.co/datasets/henggg/VIKI-R
 # Use https://github.com/hiyouga/LLaMA-Factory and place CoT data in dataset_info.json
 
 # Train model with SFT
-llamafactory-cli train configs/viki-1-3b.yaml
+llamafactory-cli train configs/hcviki-1-3b.yaml
 ```
 
 #### Step 2: Reinforcement Learning with VSPO-ReAd
 
 ```bash
-cd train/3BGRPO/VIKI-L1
+cd train/3BGRPO/HC-VIKI-L1
 
 # Initialize VIKI-R-zero training
-bash VIKI-R-zero.sh
+bash HC-VIKI-R-zero.sh
 
 # Start VIKI-R
-bash VIKI-R-VSPO.sh
+bash HC-VIKI-R-VSPO.sh
 ```
-
-## Model Weights
-L1 model checkpoints trained with our framework are available at:
-[Qwen2.5VL-3B-Instruct-VIKI-R-VSPO-L1](https://huggingface.co/yjx8888/Qwen2.5VL-3B-Instruct-VIKI-R-VSPO-L1)

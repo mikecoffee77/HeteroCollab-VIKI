@@ -43,7 +43,7 @@ cd ..
 pip install flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
 ```
 
-```
+
 
 ### Training
 
